@@ -1,4 +1,5 @@
 # meli0631_9103_Major-Project
+
 let spiralCircles = [];
 let circleDiameter = 200;
 let time = 0;
