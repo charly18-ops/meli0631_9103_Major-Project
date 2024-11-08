@@ -23,22 +23,22 @@ function setup() {
 }
 
 function draw() {
-  background(bgColor); // Update background color
+  background(bgColor); //Change bg color 
   time += 0.05; // Increment time for smooth movement
 
   for (let i = 0; i < spiralCircles.length; i++) {
     spiralCircles[i].display(time); // Pass `time` to animate each SpiralCircle
-    spiralCircles[i].checkMouseHover(); // Check if mouse is hovering over each circle
+    spiralCircles[i].checkMouseHover(); // Check if mouse is hovering over circles
   }
 }
 
 function keyPressed() {
-  if (key === ' ') { // If spacebar is pressed
+  if (key === ' ') { // Check if space button is pressed
     bgColor = color(random(255), random(255), random(255)); // Randomize background color
   }
 }
 
-class SpiralCircle {
+class SpiralCircle { // the class of spiral circles 
   constructor(x, y, diameter) {
     this.x = x;
     this.y = y;
@@ -66,7 +66,7 @@ class SpiralCircle {
     this.drawDynamicSpirals(time);
   }
 
-  drawInnerCircles() {
+  drawInnerCircles() { //inner black green white circles with fixed color 
     let sizes = [45, 25, 10];
 
     fill(0);
@@ -113,7 +113,7 @@ class SpiralCircle {
     }
   }
 
-  drawThreeCircles(x, y) {
+  drawThreeCircles(x, y) { //the three circles on the outring with fixed color 
     let sizes = [20, 13, 5];
 
     fill(255, 69, 0);
@@ -129,7 +129,7 @@ class SpiralCircle {
     circle(x, y, sizes[2]);
   }
   
-  drawDynamicSpirals(time) {
+  drawDynamicSpirals(time) { //the red dynamic spirals 
     let spiralSize = this.radius * 0.8;
     let angleStep = TWO_PI / 20;
     let angleOffset = PI / 190;
@@ -205,7 +205,7 @@ class SpiralCircle {
     let distance = dist(mouseX, mouseY, this.x, this.y);
     if (distance < this.radius) {
       // If mouse is hovering, move the circle slightly
-      this.x += random(-1, 1);
+      this.x += random(-1, 1); //x and y move in the range
       this.y += random(-1, 1);
     }
   }
