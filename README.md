@@ -1,11 +1,13 @@
 # meli0631_9103_Major-Project
 ## The function I choose -- User Interaction
 ## About how to interact with the work
-Press space button on the keyboard to change random background color.
+Press space button on the keyboard to change background color randomly.
 Hovering mouse on the concentric circles will render them move slightly. 
 ## Inspiration 
+
 ## Technical explanation
 Based on group work, I add orange inter-circle curves，key-press interactive effect, and mouse-hover interaction fuction. 
+
 For the inter-circle curve：
 1. Create drawInterCircleCurves to draw curves around each Sipral Circle.
 2. Setting up curves by using curveCount and outerRadius to define size and shape.
@@ -20,7 +22,7 @@ For key-press:
 
 For the mouseHover function, this is set to check if the mouse is hovering on the circles and create slight movements.
 1. Use dist() to calculate the distance of current mouse position and this.x, this.y.
-2. if (distance<this.radius) to check if mouse is hovering on circles.
+2. if(distance<this.radius) to check if mouse is hovering on circles.
 3. Render this.x and this.y move at the range of (-1,1) to create shaking effect.
 
 ## Code reference 
