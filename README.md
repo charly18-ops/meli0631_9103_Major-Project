@@ -5,6 +5,7 @@ Press space button on the keyboard to change background color randomly.
 Hovering mouse on the concentric circles will render them move slightly. 
 ## Inspiration 
 
+
 ## Technical explanation
 Based on group work, I add orange inter-circle curves，key-press interactive effect, and mouse-hover interaction fuction. 
 
