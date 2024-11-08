@@ -1,5 +1,17 @@
 # meli0631_9103_Major-Project
-## The function i choose -- interaction
+## The function I choose -- User Interaction
 ## About how to interact with the work
 Press space button on the keyboard to change random background color.
-Hover mouse on the concentric circles will render them move slightly. 
+Hovering mouse on the concentric circles will render them move slightly. 
+## Inspiration 
+## Technical explanation
+Based on group work, I add orange inter-circle curves and mouse-hover interaction fuction. 
+For the inter-circle curve：
+1. Create drawInterCircleCurves to draw curves around each Sipral Circle.
+2. Setting up curves by using curveCount and outerRadius to define size and shape.
+3. Looping the curves. Use for loop to iterate curveCount times to draw curves at different angle. Also, use angle offset to calculate curve position. Use map function to transform i to a certian angle range.
+4. Calculate start and end point by using statX, startY, endX,endY. And make the start and end point position by the side of outerRadius and shif for PI/5. Draw curves by setting up stroke and strokeWeight. Set up curve start point by using vertex() and make it connect to endX and endY by using quadraticVertex.
+6. Create 15 short smooth curves around the circles.
+
+## Code reference 
+1. The checkMouseHover() function is referred to this website (https://microstudio.dev/community/help/mouse-hovering/334/)
